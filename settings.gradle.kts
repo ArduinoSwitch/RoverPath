@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "RoverPath"
-include ':app'
+include(":app")
