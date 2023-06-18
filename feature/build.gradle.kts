@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("kotlin-android")
 }
 
@@ -7,11 +7,8 @@ android {
     compileSdk = Config.compileSkd
 
     defaultConfig {
-        applicationId = Config.applicationId
         minSdk = Config.minSkd
         targetSdk = Config.targetSkd
-        versionCode = Config.versionCode
-        versionName = Config.versionName
 
         testInstrumentationRunner = Config.testInstrumentationRunner
     }
@@ -38,13 +35,10 @@ android {
     kotlinOptions {
         jvmTarget = Config.jvtTarget
     }
-
-    configurations {
-    }
 }
 
 dependencies {
-    modules(DependencyGroups.modules)
+    modules(listOf(Dependencies.Modules.commons))
     implementations(DependencyGroups.commonKotlin)
     implementations(DependencyGroups.commonAndroid)
     implementations(DependencyGroups.diUi)

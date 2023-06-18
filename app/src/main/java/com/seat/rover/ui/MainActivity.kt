@@ -1,7 +1,8 @@
-package com.seat.rover
+package com.seat.rover.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.seat.rover.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
