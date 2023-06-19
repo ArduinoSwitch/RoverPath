@@ -1,6 +1,8 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    id ("kotlin-parcelize")
+    id ("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -30,6 +32,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -37,4 +43,7 @@ dependencies {
     implementations(DependencyGroups.commonAndroid)
     implementations(DependencyGroups.commonKotlin)
     implementations(DependencyGroups.ui)
+    implementations(DependencyGroups.navigation)
+    implementation(Dependencies.Kotlin.kotlinxSerialization)
+    implementation(Dependencies.Database.datastorePreferences)
 }
