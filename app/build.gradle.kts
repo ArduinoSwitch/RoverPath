@@ -50,5 +50,6 @@ dependencies {
     implementations(DependencyGroups.commonKotlin)
     implementations(DependencyGroups.commonAndroid)
     implementations(DependencyGroups.diUi)
+    implementations(DependencyGroups.navigation)
     implementation(Dependencies.Kotlin.kotlinxSerialization)
 }

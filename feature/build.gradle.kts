@@ -40,6 +40,7 @@ android {
 dependencies {
     modules(listOf(Dependencies.Modules.commons))
     implementations(DependencyGroups.commonKotlin)
+    implementations(DependencyGroups.navigation)
     implementations(DependencyGroups.commonAndroid)
     implementations(DependencyGroups.diUi)
 }

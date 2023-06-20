@@ -52,7 +52,6 @@ object Dependencies {
 
     object Di {
         const val koin = "io.insert-koin:koin-android:$koinVersion"
-        const val koinAndroid = "io.insert-koin:koin-android:$koinVersion"
     }
 
     object Database {
@@ -168,8 +167,7 @@ object DependencyGroups {
     )
 
     val diUi = listOf(
-        Dependencies.Di.koin,
-        Dependencies.Di.koinAndroid,
+        Dependencies.Di.koin
     )
 
     val dataBase = listOf(
