@@ -1,9 +1,12 @@
 package com.seat.commons.ui.utils
 
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.launch
 
 /**
  * Utils to collect a flow in a cleaner and safe way from a Fragment.
@@ -20,7 +23,9 @@ inline fun <T> Fragment.observe(flow: Flow<T>, crossinline observer: (T) -> Unit
  * Prefer using the fragment or activity extension if possible
  */
 inline fun <T> LifecycleOwner.observeFromOwner(flow: Flow<T>, crossinline observer: (T) -> Unit) {
-    lifecycleScope.launchWhenStarted {
-        flow.collect { observer(it) }
+    lifecycleScope.launch {
+        lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
+            flow.collect { observer(it) }
+        }
     }
 }

@@ -24,7 +24,6 @@ class RoverApplication : Application() {
 
     private fun setupDi() {
         startKoin {
-            androidLogger()
             androidContext(this@RoverApplication)
             commonsModule.single { applicationScope }
             modules(
