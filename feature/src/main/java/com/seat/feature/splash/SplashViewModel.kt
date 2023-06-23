@@ -1,9 +1,8 @@
-package com.seat.rover.splash
+package com.seat.feature.splash
 
 import com.seat.commons.di.FrontDispatchers
 import com.seat.commons.navigation.Navigator
 import com.seat.commons.ui.BaseViewModel
-import com.seat.rover.MainGraphDirections
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch

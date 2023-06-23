@@ -1,12 +1,12 @@
-package com.seat.rover.splash
+package com.seat.feature.splash
 
 import android.os.Bundle
 import android.view.View
 import com.seat.commons.binding.viewBinding
 import com.seat.commons.ui.BaseFragment
 import com.seat.commons.ui.utils.observe
-import com.seat.rover.R
-import com.seat.rover.databinding.SplashFragmentBinding
+import com.seat.feature.R
+import com.seat.feature.databinding.SplashFragmentBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SplashFragment: BaseFragment(R.layout.splash_fragment) {

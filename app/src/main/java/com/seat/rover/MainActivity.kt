@@ -11,6 +11,7 @@ import com.seat.commons.navigation.Navigator
 import com.seat.commons.navigation.Route
 import com.seat.commons.navigation.dialog.DialogData
 import com.seat.commons.utils.LogConstants
+import com.seat.feature.MainGraphDirections
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import org.koin.android.ext.android.inject
