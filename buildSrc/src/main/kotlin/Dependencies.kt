@@ -56,7 +56,7 @@ object Dependencies {
 
     object Database {
         private object Versions {
-            const val room = "2.3.0"
+            const val room = "2.5.0"
             const val datastore = "1.0.0-alpha05"
         }
 

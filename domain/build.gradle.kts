@@ -8,7 +8,6 @@ android {
 }
 
 dependencies {
-    modules(listOf(Dependencies.Modules.data))
     implementations(DependencyGroups.commonKotlin)
     implementation(Dependencies.Di.koin)
 }

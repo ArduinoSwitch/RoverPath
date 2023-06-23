@@ -39,7 +39,7 @@ android {
 }
 
 dependencies {
-    modules(listOf(Dependencies.Modules.commons))
+    modules(listOf(Dependencies.Modules.commons, Dependencies.Modules.domain))
     implementations(DependencyGroups.commonKotlin)
     implementations(DependencyGroups.navigation)
     implementations(DependencyGroups.commonAndroid)

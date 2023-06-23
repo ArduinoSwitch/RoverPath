@@ -31,12 +31,13 @@ val commonsModule = module {
         dispatchers = get(),
     ) }
 
+    // I don't know why koin are not able to resolve named with AppDispatchers
+    // Don't work
+    /*
     single(named(DiConstants.Dispatchers.UI)) { Dispatchers.Main.immediate }
     single(named(DiConstants.Dispatchers.CPU)) { Dispatchers.Default }
     single(named(DiConstants.Dispatchers.IO)) { Dispatchers.IO }
-    // I don't know why koin are not able to resolve named with AppDispatchers
-    // Don't work
-    /*single {
+    single {
         AppDispatchers(
             get(named(DiConstants.Dispatchers.UI)),
             get(named(DiConstants.Dispatchers.CPU)),

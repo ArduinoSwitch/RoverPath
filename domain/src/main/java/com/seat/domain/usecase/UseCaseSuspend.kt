@@ -1,4 +1,4 @@
-package com.seat.commons.usecase
+package com.seat.domain.usecase
 
 interface UseCaseSuspend<Params, Return> {
     suspend operator fun invoke(params: Params): Return
