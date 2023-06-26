@@ -2,6 +2,7 @@ package com.seat.commons.binding
 
 import android.text.Spanned
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 
 fun View.onClick(clickListener: (View) -> Unit) {
@@ -22,6 +23,10 @@ fun <T : View> T.showIf(condition: Boolean) {
     } else {
         hide()
     }
+}
+
+fun Button.enableIf(condition: Boolean) {
+    isEnabled = condition
 }
 
 fun TextView.efficientText(newText: CharSequence?) {

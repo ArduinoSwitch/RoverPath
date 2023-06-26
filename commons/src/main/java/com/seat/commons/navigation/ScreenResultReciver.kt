@@ -27,32 +27,6 @@ fun Fragment.delegateDialogResults(receiver: ScreenResultReceiver) {
     }
 }
 
-fun Fragment.finishWithResult(key: String, result: ScreenResult) {
-    try {
-        val fragmentActivity = activity as? ScreenResultReceiver
-        if (fragmentActivity?.screenResultKeys?.contains(key) == true) {
-            navigateUp()
-            fragmentActivity.onResult(key, result)
-        } else {
-            val savedStateHandle = findNavController().previousBackStackEntry?.savedStateHandle
-            navigateUp()
-            savedStateHandle!!.set(key, result)
-        }
-    } catch (e: Exception) {
-        Timber.tag(LogConstants.SendResultErrorTag).w("Sending result failed: $e")
-    }
-}
-
-private fun Fragment.navigateUp() {
-    activity?.let { activity ->
-        if (activity is NavHostHolder) {
-            Navigation.findNavController(activity, activity.navHostId).navigateUp()
-        } else {
-            throw IllegalStateException("The activity should implement NavHostHolder")
-        }
-    }
-}
-
 interface NavHostHolder {
     val navHostId: Int
 }

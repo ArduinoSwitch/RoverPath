@@ -1,6 +1,7 @@
 plugins {
-    id("com.android.library")
-    id("kotlin-android")
+    id(Plugins.androidLibrary)
+    id(Plugins.kotlinAndroid)
+    id(Plugins.serialization)
 }
 
 android {
@@ -8,6 +9,8 @@ android {
 }
 
 dependencies {
+    modules(listOf(Dependencies.Modules.commons))
     implementations(DependencyGroups.commonKotlin)
     implementation(Dependencies.Di.koin)
+    implementation(Dependencies.Kotlin.kotlinxSerialization)
 }

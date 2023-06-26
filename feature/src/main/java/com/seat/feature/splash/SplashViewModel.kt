@@ -11,6 +11,9 @@ class SplashViewModel(
     dispatcher: FrontDispatchers,
     private val navigator: Navigator,
 ): BaseViewModel(dispatcher) {
+    /**
+     * val to delay splash, maybe make some animation
+     */
     val animation = MutableStateFlow(true)
 
     init {
@@ -21,6 +24,6 @@ class SplashViewModel(
     }
 
     fun navToDashboard() {
-        navigator.goTo(SplashFragmentDirections.navToOnBoarding())
+        navigator.goTo(SplashFragmentDirections.navToMain())
     }
 }

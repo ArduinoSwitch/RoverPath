@@ -1,7 +1,9 @@
 package com.seat.commons.binding.binders
 
 import android.view.View
+import android.widget.Button
 import androidx.viewpager2.widget.ViewPager2
+import com.seat.commons.binding.enableIf
 import com.seat.commons.binding.showIf
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -12,16 +14,11 @@ interface ViewBinders: BaseBinder {
             showIf(it)
         }
     }
-    fun ViewPager2.bindRetrievePosition(positionFlow: MutableStateFlow<Int>) {
-        observe(positionFlow) {
-            this.currentItem = it
+
+    fun Button.bindEnabled(isEnabled: Flow<Boolean>) {
+        observe(isEnabled) {
+            enableIf(it)
         }
-        registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
-                positionFlow.value = position
-            }
-        })
     }
 }
 

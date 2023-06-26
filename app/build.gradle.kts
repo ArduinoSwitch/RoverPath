@@ -1,8 +1,7 @@
 plugins {
-    id("com.android.application")
-    id("kotlin-android")
-    id("kotlin-parcelize")
-    id("androidx.navigation.safeargs.kotlin")
+    id(Plugins.application)
+    id(Plugins.kotlinAndroid)
+    id(Plugins.safeArgs)
 }
 
 android {
@@ -51,5 +50,4 @@ dependencies {
     implementations(DependencyGroups.commonAndroid)
     implementations(DependencyGroups.diUi)
     implementations(DependencyGroups.navigation)
-    implementation(Dependencies.Kotlin.kotlinxSerialization)
 }

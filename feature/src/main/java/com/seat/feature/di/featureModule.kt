@@ -1,7 +1,7 @@
 package com.seat.feature.di
 
-import com.seat.feature.onboarding.OnBoardingViewModel
-import com.seat.feature.main.MainViewModel
+import com.seat.feature.newcommand.NewCommandViewModel
+import com.seat.feature.result.ResultViewModel
 import com.seat.feature.splash.SplashViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -15,14 +15,15 @@ val featureModule = module {
     }
 
     viewModel {
-        OnBoardingViewModel(
+        NewCommandViewModel(
             dispatchers = get(),
             navigator = get(),
+            sendCommandUseCase = get(),
         )
     }
 
     viewModel {
-        MainViewModel(
+        ResultViewModel(
             dispatchers = get(),
             navigator = get(),
         )

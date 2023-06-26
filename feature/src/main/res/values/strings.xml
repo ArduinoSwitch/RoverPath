@@ -1,4 +1,27 @@
 <resources>
     <string name="previous">Previous</string>
     <string name="next">Next</string>
+    <string name="add">Add</string>
+    <string name="main_title">Ships</string>
+    <string name="size_of_plateau_placeholder">Size of plateau: %s</string>
+    <string name="empty_list_message">There are no items yet</string>
+    <string name="new_command_title">Send New Command to Rover</string>
+    <string name="top_right_corner">Top/Right Corner</string>
+    <string name="top_point">Top Point</string>
+    <string name="right_point">Right Point</string>
+    <string name="rover_position">Rover position</string>
+    <string name="rover_x_position">X Point</string>
+    <string name="rover_y_position">Y Point</string>
+    <string name="rover_direction">Rover Direction</string>
+    <string name="rover_moviments">Rover Movements</string>
+    <string name="send_button">Send Command</string>
+    <string name="rover_N" translatable="false">N</string>
+    <string name="rover_S" translatable="false">S</string>
+    <string name="rover_E" translatable="false">E</string>
+    <string name="rover_W" translatable="false">W</string>
+    <string name="dialog_no_connection_title">No Connection</string>
+    <string name="dialog_no_connection_description">It seems you don\'t have an internet connection, please try again later</string>
+    <string name="dialog_generic_title">It seems that something wrong happened</string>
+    <string name="dialog_generic_desc">Try again in a few moments</string>
+    <string name="position_placeholder" translatable="false">X: %1d, Y: %2d</string>
 </resources>

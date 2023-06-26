@@ -1,30 +1,15 @@
 package com.seat.commons.di
 
-import androidx.datastore.preferences.createDataStore
 import com.seat.commons.navigation.Navigator
 import com.seat.commons.navigation.dialog.ui.InformativeDialogViewModel
-import com.seat.commons.preference.AppPreferencesDataSource
-import com.seat.commons.preference.AppPreferencesDataSourceImpl
 import kotlinx.coroutines.Dispatchers
-import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
-import org.koin.core.qualifier.named
 import org.koin.dsl.binds
 import org.koin.dsl.module
 
 private const val APP_PREFERENCES_ACCESSOR = "APP_PREFERENCES"
 
 val commonsModule = module {
-    single(named(APP_PREFERENCES_ACCESSOR)) {
-        androidContext().createDataStore(AppPreferencesDataSourceImpl.PREF_NAME)
-    }
-
-    factory<AppPreferencesDataSource> {
-        AppPreferencesDataSourceImpl(
-            dispatchers = get(),
-            dataStore = get(named(APP_PREFERENCES_ACCESSOR)),
-        )
-    }
 
     single { Navigator() }
     viewModel { InformativeDialogViewModel(

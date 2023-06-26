@@ -12,7 +12,6 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class SplashFragment: BaseFragment(R.layout.splash_fragment) {
 
     override val viewModel: SplashViewModel by viewModel()
-    private val binding: SplashFragmentBinding by viewBinding(SplashFragmentBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

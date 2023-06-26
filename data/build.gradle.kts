@@ -1,8 +1,7 @@
 plugins {
-    id("com.android.library")
-    id("kotlin-android")
-    id("kotlin-parcelize")
-    id("kotlin-kapt")
+    id(Plugins.androidLibrary)
+    id(Plugins.kotlinAndroid)
+    id(Plugins.kapt)
 }
 
 android {
@@ -10,12 +9,8 @@ android {
 }
 
 dependencies {
-    modules(listOf(Dependencies.Modules.domain))
+    modules(listOf(Dependencies.Modules.domain, Dependencies.Modules.commons))
     implementations(DependencyGroups.commonKotlin)
+    implementations(DependencyGroups.network)
     implementation(Dependencies.Di.koin)
-    kapt(Dependencies.Database.roomCompiler)
-    implementation(Dependencies.Database.roomRuntime)
-    implementation(Dependencies.Database.roomKtx)
-    implementation(Dependencies.Database.roomTest)
-    implementation(Dependencies.Kotlin.kotlinxSerialization)
 }
