@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="previous">Anterior</string>
+    <string name="next">Següent</string>
+    <string name="add">Afegir</string>
+    <string name="main_title">Naus</string>
+    <string name="size_of_plateau_placeholder">Mida de l\'altiplà: %s</string>
+    <string name="empty_list_message">No hi ha cap element encara</string>
+    <string name="new_command_title">Enviar Nou Comandament al Rover</string>
+    <string name="top_right_corner">Racó Superior/Dret</string>
+    <string name="top_point">Punt Superior</string>
+    <string name="right_point">Punt Dret</string>
+    <string name="rover_position">Posició del Rover</string>
+    <string name="rover_x_position">Punt X</string>
+    <string name="rover_y_position">Punt Y</string>
+    <string name="rover_direction">Direcció del Rover</string>
+    <string name="rover_moviments">Moviments del Rover</string>
+    <string name="send_button">Enviar Comanda</string>
+    <string name="dialog_no_connection_title">Sense connexió</string>
+    <string name="dialog_no_connection_description">Sembla que no tens connexió a internet, si us plau, prova-ho més tard</string>
+    <string name="dialog_generic_title">Sembla que hi ha hagut un error</string>
+    <string name="dialog_generic_desc">Torna-ho a provar en uns moments</string>
+</resources>

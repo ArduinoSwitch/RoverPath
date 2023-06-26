@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="previous">Anterior</string>
+    <string name="next">Siguiente</string>
+    <string name="add">Agregar</string>
+    <string name="main_title">Naves</string>
+    <string name="size_of_plateau_placeholder">Tamaño de la meseta: %s</string>
+    <string name="empty_list_message">No hay artículos aún</string>
+    <string name="new_command_title">Enviar Nuevo Comando al Rover</string>
+    <string name="top_right_corner">Esquina Superior/Derecha</string>
+    <string name="top_point">Punto Superior</string>
+    <string name="right_point">Punto Derecho</string>
+    <string name="rover_position">Posición del Rover</string>
+    <string name="rover_x_position">Punto X</string>
+    <string name="rover_y_position">Punto Y</string>
+    <string name="rover_direction">Dirección del Rover</string>
+    <string name="rover_moviments">Movimientos del Rover</string>
+    <string name="send_button">Enviar Comando</string>
+    <string name="dialog_no_connection_title">Sin conexion</string>
+    <string name="dialog_no_connection_description">Parece que no tienes conexion a internet, intentalo mas tarde</string>
+    <string name="dialog_generic_title">Parece que algo salió mal</string>
+    <string name="dialog_generic_desc">Inténtalo de nuevo en unos momentos</string>
+</resources>

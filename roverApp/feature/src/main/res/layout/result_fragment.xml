@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="8dp"
+    >
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_item"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/actual_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginTop="8dp"
+        android:text="@string/rover_position"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/actual_position_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        tools:text="X: 2, Y: 3"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/actual_direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginTop="8dp"
+        android:text="@string/rover_direction"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/actual_direction_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        tools:text="N"
+        />
+
+</LinearLayout>
